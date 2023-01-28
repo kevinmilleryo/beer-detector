@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hot dog not hot dog</title>
+    <title>Is it beer?</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
@@ -9,11 +9,11 @@
   <body>
      
         <% if(locals.count > 0) { %>
-            <img src='<%= img%>' alt='Hot dog'> 
-            <h1>Hot Dog</h1>
+            <img src='<%= img%>' alt='Beer'> 
+            <h1>Its beer!</h1>
         <% }else { %>
-            <img src='<%= img%>' alt='Not Hot dog'> 
-            <h1> Not Hot Dog </h1>
+            <img src='<%= img%>' alt='No Beer'> 
+            <h1> Not beer. </h1>
         <% } %>
  
     <form action="/" enctype="multipart/form-data" method="post">

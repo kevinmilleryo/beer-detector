@@ -56,7 +56,7 @@ app.get("/", (req, res) => {
 
 app.post("/", upload.single("file-to-upload"), async (req, res) => {
   try {
-    let hotDogCount = 0;
+    let beerCount = 0;
     // Upload image to cloudinary
     const result = await cloudinary.uploader.upload(req.file.path);
     const objectURL = result.secure_url;
@@ -77,8 +77,8 @@ app.post("/", upload.single("file-to-upload"), async (req, res) => {
         `${objects.length} object${objects.length == 1 ? "" : "s"} found:`
       );
       for (const obj of objects) {
-        if (obj.object === "Hot dog") {
-          hotDogCount = hotDogCount + 1;
+        if (obj.object === "Beer") {
+          beerCount = beerCount + 1;
         }
         console.log(
           `    ${obj.object} (${obj.confidence.toFixed(
@@ -100,10 +100,10 @@ app.post("/", upload.single("file-to-upload"), async (req, res) => {
       );
     }
 
-    res.render("result.ejs", { count: hotDogCount, img: objectURL });
+    res.render("result.ejs", { count: beerCount, img: objectURL });
   } catch (err) {
     console.log(err);
   }
 });
 
-app.listen(process.env.PORT || 8000);
+app.listen(process.env.PORT || 2121);

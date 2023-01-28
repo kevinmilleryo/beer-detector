@@ -1,5 +1,5 @@
 {
-  "name": "Hot Dog Not Hot Dog - Educational Example",
+  "name": "Beer-Detector",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@azure/cognitiveservices-computervision": "^8.1.0",
     "async": "^3.2.0",
+    "axios": "^1.2.5",
     "cloudinary": "^1.26.1",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
