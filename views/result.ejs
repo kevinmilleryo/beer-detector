@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-     
-        <% if(locals.count > 0) { %>
+        
+        <%  if(locals.beerCount > 0) { %>
             <img src='<%= img%>' alt='Beer'> 
             <h1>Its beer!</h1>
+        <% }else if(locals.beverageCount > 0) { %>
+            <img src='<%= img%>' alt='Non-beer beverage'> 
+            <h1>Its a drink, but not beer!</h1>
         <% }else { %>
             <img src='<%= img%>' alt='No Beer'> 
             <h1> Not beer. </h1>
